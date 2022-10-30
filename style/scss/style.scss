@@ -1,0 +1,169 @@
+@import "_fonts.scss";
+@import "_reset.scss";
+
+$transition: 0.6s;
+$green: #25d366;
+
+body {
+  background: url(../../img/bg_pvz_store.png) no-repeat center;
+    background-size: cover;
+  overflow-x: hidden;
+  color: #fff;
+//   min-height: 100vh;
+  position: relative;
+  //   overflow-y: hidden;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  overflow-x: hidden;
+  padding: 0 30px;
+
+  h1 {
+    margin-top: 35px;
+  }
+
+  h2 {
+    margin: 20px 0;
+  }
+
+  h3 {
+    font-size: 26px;
+    margin-top: 30px;
+  }
+}
+
+.link_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+  row-gap: 15px;
+
+  a {
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition;
+
+    &:hover,
+    &:focus {
+      transition: $transition;
+      transform: scale(1.16);
+    }
+  }
+
+  .phone {
+    circle {
+      fill: $green;
+    }
+  }
+
+  .whatsapp {
+    background-color: $green;
+  }
+
+  .viber {
+    .cls-1 {
+      fill: #fff;
+    }
+
+    .cls-2 {
+      fill: none;
+      stroke: #fff;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 16.86px;
+    }
+
+    svg {
+      background-color: #7360f2;
+    }
+  }
+
+  .gmail {
+    // padding: 20px;
+    width: 80px;
+    height: 80px;
+    background: rgb(228, 228, 228);
+
+    img {
+      max-width: 100%;
+      margin: 10px;
+
+      max-width: 50px;
+      max-height: 80px;
+    }
+  }
+
+  .facebook {
+    width: 80px;
+    height: 80px;
+
+    svg {
+      transform: scale(1.5);
+    }
+
+    .bg-color {
+      fill: #1877f2;
+    }
+  }
+
+  a {
+    svg {
+      width: 80px;
+      height: 80px;
+
+      * {
+        transition: $transition;
+      }
+    }
+  }
+}
+
+//   =============================== OTHER ==============================================================================
+
+h1 {
+  font-size: 36px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.logo {
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.bg-fone {
+  background-color: hsla(0, 0%, 0%, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.bg-img {
+  position: absolute;
+  z-index: -2;
+  top: 50%;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  transform: translate(-50%, -50%);
+}
